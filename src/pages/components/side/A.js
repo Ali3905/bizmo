@@ -26,7 +26,7 @@ function A() {
         <button className="w-full hover:bg-gray-200 flex items-center px-3 py-2 text-gray-600 transform rounded-lg  hover:text-gray-800" href="#">
        
 
-            <span className="mx-2 text-sm font-medium">Z</span>
+            <span className="mx-2 text-sm font-medium" onClick={()=>updateComponent("Z")}>Z</span>
         </button>    
     </div>
 

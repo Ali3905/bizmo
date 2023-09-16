@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react';
 import A from './side/A';
 import B from './side/B';
-
+import { ComponentContext } from '@/context/ComponentState';
 
 
 function Leftside() {
   const [isClicked, setIsClicked] = useState('A');
+  const {updateComponent} = useContext(ComponentContext)
+
+  const clickedB = () => {
+    setIsClicked("B")
+    updateComponent("B")
+  }
 
   return (
     <>
@@ -26,7 +32,7 @@ function Leftside() {
           </button>
 
           <button
-            onClick={() => setIsClicked('B')}
+            onClick={clickedB}
             className="p-2 inline-block text-gray-500 rounded-lg focus:text-gray-700 focus:bg-gray-100 hover:bg-gray-200"
           >
            B
